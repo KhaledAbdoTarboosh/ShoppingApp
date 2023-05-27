@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="col xs 12">
+        <form>
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="name">Name</label>          
+                    <input type="text" id="name" class="form-control" #ItemNameInput />
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="amount">Amount</label>            
+                    <input type="text" id="amount" class="form-control" #ItemAmountInput />
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="testValue">Test</label><br/>
+                    <label id="test" value="xxx" >{{ testValue }}</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="button" class="btn btn-success" style="margin: 5px;"
+                        (click)="onAddItem()">Add</button>
+                    <button type="button" class="btn btn-danger" style="margin: 5px;">Delete</button>
+                    <button type="button" class="btn btn-primary" style="margin: 5px;">Clear</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

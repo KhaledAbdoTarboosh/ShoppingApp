@@ -1,0 +1,9 @@
+
+<app-header (selectedPageChanged)="onHeaderNavigationChanged($event)"></app-header>
+<div class="container">
+    <div class="row">       
+        <app-recipes *ngIf="selectedPage==='Recipes'" ></app-recipes>
+        <app-shopping-list *ngIf="selectedPage==='Shopping-list'"></app-shopping-list>
+        
+    </div>
+</div>

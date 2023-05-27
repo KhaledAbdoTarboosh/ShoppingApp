@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col xs 12">
+            <img src="{{ RecipeDetails.imagePath }}" alt="{{ RecipeDetails.name }}" class="img-responsive"
+                style="max-width: 800px;" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col xs 12">
+            <h1>{{ RecipeDetails.name }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col xs 12">
+            <div class="btn-group" appDropDownDirective>
+                <button type="button" class="btn btn-primary dropdown-toggle">
+                    Manage Recipe <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a (click)="AddToShoppingList()">To shopping list</a></li>
+                    <li><a href="#">Edit the recipe</a></li>
+                    <li><a href="#">Delete the recipe</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col xs 12">
+            {{ RecipeDetails.description }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col xs 12">
+            Incrediants : 
+            <ul *ngFor="let rec of RecipeDetails.ingredients" >
+                <li>{{ rec.name}} : amount {{ rec.amount}} :</li>
+            </ul>
+        </div>
+    </div>
+</div>
